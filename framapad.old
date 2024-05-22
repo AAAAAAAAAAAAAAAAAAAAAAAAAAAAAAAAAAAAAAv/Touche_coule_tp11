@@ -1,0 +1,38 @@
+Ceci est la mise en place faite au début du projet, marche à suivre pour le projet. Celà reste à l'état de brouillon.
+
+Groupe :Richard, Guillaume, Quentin, Louis
+
+SMP - TP11  - Bataille Navale 
+
+Trucs à faire:
+    
+    Rendu :
+        
+    - Fonctionnement simplifié du projet (ici)
+    - Diagramme de cas d'utilisation
+    - Diagramme de classes
+    
+    Programmation :
+        faisable maintenant:
+            - Graphique
+        à faire après les diagrammes:
+            - Classes bateaux
+            - Tests unitaires 
+            -classe plateau
+            -tests unitaires
+            - Rajout des bateaux sur le plateau
+            -Ajout de prompt pour choix de tir
+            -tests unitaires
+            -tests sans IA
+            -création de l'IA:
+                -purement aléatoire
+                -rajout de la détection de touché / coulé
+                
+                
+                
+        Fonctionnement simplifié:
+            
+            Une classe bateau prend le type du bateau (et sous-classes), sa position , sa taille, son alignement (sud, nord, est, ouest) et l'état de ses parties. Il contient aussi Ces différents caractères graphiques associés.
+            une classe plateau peut contenir une classe bateau. Une vérification de collision est  faite lors de leurs ajouts. Un tableau graphique simple des bateaux , leur état et dans un autre les tirs effectués par chaque joueurs. 
+            On boucle entre les tours de chaque joueur jusqu'à la fin de la partie.
+            à voir pour une classe partie qui pourrait être rajoutée au besoin. Pour l'instant, son intérêt semble quasi inexistant.
