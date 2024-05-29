@@ -1,4 +1,4 @@
-#include "bateau.h"
+#include "Bateau.h"
 using std::string;
 Bateau::Bateau()
 {
