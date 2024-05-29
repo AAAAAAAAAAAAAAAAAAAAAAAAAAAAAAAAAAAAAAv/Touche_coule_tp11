@@ -9,7 +9,7 @@ protected:
     std::string nomJoueur;
 
 public:
-    explicit Joueur(string nom = "tommy");
+    explicit Joueur(std::string nom = "tommy");
     
 
 };
