@@ -1,3 +1,5 @@
 
 .vscode/
 /.vs/TPSMPTouche
+/TPSMPTouche/x64/Debug
+/x64/Debug
