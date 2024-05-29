@@ -1,4 +1,5 @@
 #include "ControlleurJoueur.h"
+#include "Plateau.h"
 
 ControlleurJoueur::ControlleurJoueur() : hitPoint(0), pPlateau(nullptr)
 {
@@ -20,10 +21,10 @@ class Plateau* ControlleurJoueur::getPlateau()
 bool ControlleurJoueur::tir(class Plateau* plateau, unsigned int x, unsigned int y)
 {
     // Si pas touché ==> on tire sur le plateau de tir, on incrémente hitPoint, on renvoi true
-    if(!plateau.touche(x, y))
+    if(!plateau->touche(x, y))
     {
         hitPoint++;
-        this->plateau.tir(x, y);
+        plateau->tir(x, y);
         return true;
     }
     return false;

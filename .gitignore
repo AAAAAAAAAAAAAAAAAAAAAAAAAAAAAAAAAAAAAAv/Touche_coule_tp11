@@ -2,3 +2,5 @@
 .vscode/
 /.vs/TPSMPTouche
 *.vcxproj*
+/x64/Debug
+/TPSMPTouche/x64/Debug
