@@ -127,14 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bateau.cpp" />
+    <ClCompile Include="Bateau.cpp" />
     <ClCompile Include="ControlleurJoueur.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Plateau.cpp" />
     <ClCompile Include="TPSMPTouche.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bateau.h" />
+    <ClInclude Include="Bateau.h" />
     <ClInclude Include="ControlleurJoueur.h" />
     <ClInclude Include="Joueur.h" />
   </ItemGroup>

@@ -18,9 +18,6 @@
     <ClCompile Include="TPSMPTouche.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bateau.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ControlleurJoueur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -30,15 +27,18 @@
     <ClCompile Include="Plateau.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Bateau.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bateau.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="ControlleurJoueur.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Joueur.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bateau.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
