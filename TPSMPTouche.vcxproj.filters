@@ -41,5 +41,8 @@
     <ClInclude Include="Bateau.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Plateau.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

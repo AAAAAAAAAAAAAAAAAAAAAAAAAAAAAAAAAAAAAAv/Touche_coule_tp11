@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClInclude Include="Bateau.h" />
     <ClInclude Include="ControlleurJoueur.h" />
+    <ClInclude Include="Plateau.h" />
     <ClInclude Include="Joueur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
