@@ -1,5 +1,4 @@
 #include "Plateau.h"
-#include "Bateau.h"
 #include <iostream>
 
 /**
@@ -40,6 +39,29 @@ Type** Alloc2DArray(uint8_t row, uint8_t columns)
 
 	return pArray;
 }
+template <class Type>
+bool Free2DArray(Type** pArray, uint8_t row, uint8_t columns)
+{
+	if (nullptr == pArray)
+	{
+		return false;
+	}
+
+	for (int i = 0; i < row; i++)
+	{
+
+		Type* currentColumn = pArray[i];
+		if (nullptr == currentColumn)
+		{
+			/* Invalid Allocation */
+			return false;
+		}
+
+		delete[] currentColumn;
+	}
+	delete[] pArray;
+	return true;
+}
 
 Plateau::Plateau(uint8_t _row, uint8_t _columns) : row(_row), columns(_columns)
 {
@@ -56,6 +78,22 @@ Plateau::Plateau(uint8_t _row, uint8_t _columns) : row(_row), columns(_columns)
 	{
 		return;
 	}
+}
+
+Plateau::~Plateau()
+{
+	Free2DArray(this->plateauFlotte, this->row, this->columns);
+	Free2DArray(this->plateauTir, this->row, this->columns);
+}
+
+uint8_t Plateau::getRow()
+{
+	return this->row;
+}
+
+uint8_t Plateau::getColumns()
+{
+	return this->columns;
 }
 
 void Plateau::tir(uint8_t row, uint8_t columns)

@@ -1,5 +1,6 @@
 #pragma once
 #include <cinttypes>
+#include "Bateau.h"
 
 /**
  * @brief
@@ -24,6 +25,10 @@ private:
 
 public:
 	Plateau(uint8_t row = 10, uint8_t columns = 10);
+	~Plateau();
+
+	uint8_t getRow();
+	uint8_t getColumns();
 
 	void tir(uint8_t row, uint8_t columns);
 	char touche(uint8_t row, uint8_t columns);
