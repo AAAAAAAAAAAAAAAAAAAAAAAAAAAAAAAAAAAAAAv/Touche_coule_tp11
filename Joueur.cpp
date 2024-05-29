@@ -1,6 +1,6 @@
 #include "Joueur.h"
 
-Joueur::Joueur(string nom) : nomJoueur(nom)
+Joueur::Joueur(std::string nom) : nomJoueur(nom)
 {
 
 }
