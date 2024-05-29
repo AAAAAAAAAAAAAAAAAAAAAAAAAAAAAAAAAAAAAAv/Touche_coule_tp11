@@ -1,7 +1,7 @@
 #ifndef CONTROLLEURJOUEUR_H
 #define CONTROLLEURJOUEUR_H
 
-class ControllerJoueur
+class ControlleurJoueur
 {
 protected:
     unsigned int hitPoint;
@@ -9,7 +9,7 @@ protected:
 
 public:
     ControlleurJoueur();
-    ~ControllerJoueur() = default;
+    ~ControlleurJoueur() = default;
     void setPlateau(class Plateau* plateau);
     class Plateau* getPlateau();
     bool tir(Plateau* plateau, unsigned int x, unsigned int y);

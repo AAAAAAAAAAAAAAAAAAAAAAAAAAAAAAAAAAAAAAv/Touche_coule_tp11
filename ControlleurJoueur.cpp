@@ -1,23 +1,23 @@
 #include "ControlleurJoueur.h"
 
-ControllerJoueur::ControlleurJoueur() : this->hitPoint(0), this->pPlateau(nullptr)
+ControlleurJoueur::ControlleurJoueur() : hitPoint(0), pPlateau(nullptr)
 {
 
 }
 
-void ControllerJoueur::setPlateau(class Plateau* plateau)
+void ControlleurJoueur::setPlateau(class Plateau* plateau)
 {
     // Init le ptr du plateau du joueur
     this->pPlateau = plateau;
 }
 
-class Plateau* ControllerJoueur::getPlateau()
+class Plateau* ControlleurJoueur::getPlateau()
 {
     // renvoi un pointeur sur le plateau joueur
     return this->pPlateau;
 }
 
-bool ControllerJoueur::tir(class Plateau* plateau, unsigned int x, unsigned int y)
+bool ControlleurJoueur::tir(class Plateau* plateau, unsigned int x, unsigned int y)
 {
     // Si pas touché ==> on tire sur le plateau de tir, on incrémente hitPoint, on renvoi true
     if(!plateau.touche(x, y))
@@ -29,7 +29,7 @@ bool ControllerJoueur::tir(class Plateau* plateau, unsigned int x, unsigned int 
     return false;
 }
 
-unsigned int ControllerJoueur::getHitPoints()
+unsigned int ControlleurJoueur::getHitPoints()
 {
     return this->hitPoint;
 }
