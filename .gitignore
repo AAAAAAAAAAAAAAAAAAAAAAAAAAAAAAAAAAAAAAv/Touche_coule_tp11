@@ -4,3 +4,5 @@
 *.vcxproj*
 /x64/Debug
 /TPSMPTouche/x64/Debug
+
+.$diagramme_de_classe_tp11.drawio.bkp
