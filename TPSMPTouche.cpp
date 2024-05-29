@@ -2,11 +2,43 @@
 //
 
 #include <iostream>
-#include ""
+#include "GestionnaireDeJeu.h"
+#include "ControlleurJoueur.h"
+#include "Plateau.h"
+#include "Joueur.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Joueur* pPlayerOne = new Joueur("Eric Zemmour");
+	if (nullptr == pPlayerOne)
+	{
+		std::cerr << "Failed to create a Joueur object" << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	Joueur* pPlayerTwo = new Joueur("Marine Le Pen");
+	if (nullptr == pPlayerTwo)
+	{
+		std::cerr << "Failed to create a Joueur object" << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	GestionnaireDeJeu* pGameManager = new GestionnaireDeJeu;
+	pGameManager->addPlayer(pPlayerOne);
+	pGameManager->addPlayer(pPlayerTwo);
+
+
+
+	Plateau* pPlateau = new Plateau(10, 10);
+	if (nullptr == pPlateau)
+	{
+		std::cerr << "Failed to create a Plateau object" << std::endl;
+		return EXIT_FAILURE;
+	}
+
+
+
+	return EXIT_SUCCESS;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

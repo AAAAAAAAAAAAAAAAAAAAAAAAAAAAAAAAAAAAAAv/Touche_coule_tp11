@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Bateau.cpp" />
     <ClCompile Include="ControlleurJoueur.cpp" />
+    <ClCompile Include="GestionnaireDeJeu.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Plateau.cpp" />
     <ClCompile Include="TPSMPTouche.cpp" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Bateau.h" />
     <ClInclude Include="ControlleurJoueur.h" />
+    <ClInclude Include="GestionnaireDeJeu.h" />
     <ClInclude Include="Plateau.h" />
     <ClInclude Include="Joueur.h" />
   </ItemGroup>

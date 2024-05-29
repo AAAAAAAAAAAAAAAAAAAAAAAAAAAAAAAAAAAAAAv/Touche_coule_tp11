@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TPSMPTouche.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ControlleurJoueur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -30,19 +27,26 @@
     <ClCompile Include="Bateau.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TPSMPTouche.cpp" />
+    <ClCompile Include="GestionnaireDeJeu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ControlleurJoueur.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Bateau.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Joueur.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bateau.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="ControlleurJoueur.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Plateau.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionnaireDeJeu.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
