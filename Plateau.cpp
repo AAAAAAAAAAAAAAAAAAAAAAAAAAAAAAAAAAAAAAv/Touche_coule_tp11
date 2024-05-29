@@ -81,7 +81,7 @@ bool Plateau::ajoutBateau(class Bateau* bateau, uint8_t row, uint8_t columns)
 	/* Check if the position 2d array is valid */
 	if(nullptr == position)
 	{
-		// Y'a aucun monde où ça arrives
+		// Y'a aucun monde oï¿½ ï¿½a arrives
 		return false;
 	}
 
