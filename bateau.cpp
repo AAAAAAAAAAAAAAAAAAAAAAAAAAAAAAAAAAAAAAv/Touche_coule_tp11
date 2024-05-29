@@ -58,5 +58,16 @@ bool Bateau::setBateauAscii(std::string asciiX, std::string asciiY)
     }
     return 0;
 }
+std::string Bateau::getBateauAscii()
+{
+    if(direction)
+    {
+        return bateauAscii[1];
+    }else
+    {
+        return bateauAscii[0];
+    }
+    
+}
 
 

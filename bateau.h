@@ -26,7 +26,7 @@ class Bateau
     std::string getBateauName();
     bool setBateauAscii(std::string asciiX, std::string asciiY);
     std::string getBateauAscii();
-}
+};
 
 
 #endif
