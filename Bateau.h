@@ -2,6 +2,7 @@
 #define BATEAU_H
 
 #include <string>
+
 class Bateau
 {
 private:

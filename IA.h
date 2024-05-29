@@ -3,15 +3,14 @@
 
 #include <vector>
 
-enum class Etat 
+enum class Etat
 {
     Toucher = 0,
-    PasToucher = 1, 
+    PasToucher = 1
 };
 
 class IA : public ControlleurJoueur 
 {
-
 protected:
 std::vector<int> dernierTir;
 
