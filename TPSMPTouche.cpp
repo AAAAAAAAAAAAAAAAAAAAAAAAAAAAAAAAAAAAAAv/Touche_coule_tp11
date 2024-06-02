@@ -1,6 +1,4 @@
 /*
-
-
  /$$$$$$$              /$$               /$$ /$$ /$$                 /$$   /$$                               /$$          
 | $$__  $$            | $$              |__/| $$| $$                | $$$ | $$                              | $$          
 | $$  \ $$  /$$$$$$  /$$$$$$    /$$$$$$  /$$| $$| $$  /$$$$$$       | $$$$| $$  /$$$$$$  /$$    /$$ /$$$$$$ | $$  /$$$$$$ 
@@ -33,10 +31,8 @@
 | $$/$$ $| $$  | $| $$_____| $$  | $$ | $$ /$| $| $$  | $$                
 |  $$$$$$|  $$$$$$|  $$$$$$| $$  | $$ |  $$$$| $| $$  | $$                
  \____ $$$\______/ \_______|__/  |__/  \___/ |__|__/  |__/                
-      \__/                                                                
-                                                                                                            
+      \__/                                                                                                                                                                           
 */
-
 
 #include <algorithm>
 #include "GestionnaireDeJeu.h"
@@ -104,7 +100,6 @@ int main()
 		&pTorpilleur1
 	};
 	
-
 	for(auto* element : tabBateau)
 	{
 		*element = new Bateau();
@@ -116,7 +111,6 @@ int main()
 	}
 
 	// initialisation des tailles de bateaux
-
 	pPorteAvion1->setBateauSize(5);
 	pCroiseur1->setBateauSize(4);
 	pContreTorpilleur11->setBateauSize(3);
@@ -135,14 +129,13 @@ int main()
 	Bateau* pContreTorpilleur22 = new Bateau(*pContreTorpilleur12);
 	Bateau* pTorpilleur2 = new Bateau(*pTorpilleur1);
 
-	pGameManager->startGame();
-	
 	tabBateau.push_back(&pPorteAvion2);
 	tabBateau.push_back(&pCroiseur2);
 	tabBateau.push_back(&pContreTorpilleur21);
 	tabBateau.push_back(&pContreTorpilleur22);
 	tabBateau.push_back(&pTorpilleur2);
 
+	pGameManager->startGame();
 	// Initiation des positions et directions pour joueur 1
 	for(int i = 0; i < 5; i++)
 	{

@@ -63,7 +63,7 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	{
 		std::cerr << "Coor error" << std::endl;
 		return;
-	} 
+	}
 	pBateau->setPosition(_X, _Y);
 	
 	std::cout << std::endl;
