@@ -96,31 +96,24 @@ int main()
 	Bateau* pContreTorpilleur12 = nullptr;
 	Bateau* pTorpilleur1 = nullptr;
 	
-	std::vector<Bateau*> tabBateau {
-		pPorteAvion1,
-		pCroiseur1,
-		pContreTorpilleur11,
-		pContreTorpilleur12,
-		pTorpilleur1
+	std::vector<Bateau**> tabBateau {
+		&pPorteAvion1,
+		&pCroiseur1,
+		&pContreTorpilleur11,
+		&pContreTorpilleur12,
+		&pTorpilleur1
 	};
-	/*
-	tabBateau[0] = pPorteAvion1;
-	tabBateau[1] = pCroiseur1;
-	tabBateau[2] = pContreTorpilleur11;
-	tabBateau[3] = pContreTorpilleur12;
-	tabBateau[4] = pTorpilleur1;
-	*/
-	std::for_each(std::begin(tabBateau), 
-				  std::end(tabBateau), 
-				  [&](auto*& element) -> int {
+	
 
-					element = new Bateau();
-					if(nullptr == element)
-					{
-						std::cerr << "Failed to create a Bateau object" << std::endl;
-						return EXIT_FAILURE;
-					}
-				});
+	for(auto* element : tabBateau)
+	{
+		*element = new Bateau();
+		if(nullptr == element)
+		{
+			std::cerr << "Failed to create a Bateau object" << std::endl;
+			return EXIT_FAILURE;
+		}
+	}
 
 	// initialisation des tailles de bateaux
 
@@ -142,14 +135,20 @@ int main()
 	Bateau* pContreTorpilleur22 = new Bateau(*pContreTorpilleur12);
 	Bateau* pTorpilleur2 = new Bateau(*pTorpilleur1);
 
-	tabBateau.push_back(pPorteAvion2);
-	tabBateau.push_back(pCroiseur2);
-	tabBateau.push_back(pContreTorpilleur21);
-	tabBateau.push_back(pContreTorpilleur22);
-	tabBateau.push_back(pTorpilleur2);
-
 	pGameManager->startGame();
-	pGameManager->configure();
+	
+	tabBateau.push_back(&pPorteAvion2);
+	tabBateau.push_back(&pCroiseur2);
+	tabBateau.push_back(&pContreTorpilleur21);
+	tabBateau.push_back(&pContreTorpilleur22);
+	tabBateau.push_back(&pTorpilleur2);
+
+
+	for(int i = 0; i < 5; i++)
+	{
+		pGameManager->configure(0, *tabBateau[i]);
+	}
+
 	/*
 	std::cout << "*******BATAILLE NAVALE*******\n\n";
 	std::cout << "Nombre de joueurs : 2\n";
@@ -173,13 +172,11 @@ int main()
 	delete pPlateau1;
 	delete pPlateau2;
 
-	std::for_each(std::begin(tabBateau), 
-				  std::end(tabBateau), 
-				  [&](auto*& element) -> void {
-
-					delete element;
-					element = nullptr;
-				});
+	for(auto* element : tabBateau)
+	{
+		delete *element;
+		*element = nullptr; 
+	}
 												
 	return EXIT_SUCCESS;
 }

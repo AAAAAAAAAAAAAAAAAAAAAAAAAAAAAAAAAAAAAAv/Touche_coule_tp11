@@ -14,6 +14,7 @@ public:
     explicit Joueur(std::string nom = "tommy");
     ~Joueur();
 
+    std::string getNom() { return nomJoueur; }
 };
 
 #endif // JOUEUR_H

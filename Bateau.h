@@ -33,7 +33,7 @@ public:
 
     void damageBateau();
 
-    void setBateauSize(unsigned int size);
+    void setBateauSize(uint8_t size);
     void setBateauName(std::string name);
     bool setBateauAscii(std::string asciiX, std::string asciiY);
 };

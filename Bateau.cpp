@@ -50,7 +50,7 @@ bool Bateau::getBateauState()
 {
     return hitPoints;
 }
-void Bateau::setBateauSize(unsigned int size)
+void Bateau::setBateauSize(uint8_t size)
 {
     bateauSize = size;
 }

@@ -10,10 +10,12 @@ protected:
 public:
     ControlleurJoueur();
     ~ControlleurJoueur() = default;
+    
     void setPlateau(class Plateau* plateau);
     class Plateau* getPlateau();
-    bool tir(Plateau* plateau, unsigned int x, unsigned int y);
     unsigned int getHitPoints();
+    
+    bool tir(Plateau* plateau, unsigned int x, unsigned int y);
 };
 
 #endif // CONTROLLEURJOUEUR_H
