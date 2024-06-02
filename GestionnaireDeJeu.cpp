@@ -20,9 +20,10 @@ void GestionnaireDeJeu::addPlayer(class Joueur* joueur)
 void GestionnaireDeJeu::startGame()
 {
 	HANDLE couleur_de_console = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(couleur_de_console, 27);
-	std::cout << "*******BATAILLE NAVALE*******\n\n";
+	SetConsoleTextAttribute(couleur_de_console, 29);
+	std::cout << "*********************BATAILLE NAVALE*********************";
 	SetConsoleTextAttribute(couleur_de_console, 15);
+	std::cout << "\n\n";
 	std::cout << "Nombre de joueurs : 2\n";
 	std::cout << "Nombre de bateaux  : 5/joueur\n\n";
 }
@@ -38,27 +39,27 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 		return;
 	}
 
-	std::cout << "------------Console "
-			  << this->listeJoueur[playerIndex]->getNom()  
-			  <<"------------\n";
+	std::cout << "------------Console ";
+	SetConsoleTextAttribute(couleur_de_console, 3);
+	std::cout << this->listeJoueur[playerIndex]->getNom();
+	SetConsoleTextAttribute(couleur_de_console, 15);  
+	std::cout <<"------------\n";
 	this->listeJoueur[playerIndex]->getPlateau()->drawPlateauFlotte();
 	std::cout << std::endl;
 	std::cout << "Configuration de Bateau : "; 
 	SetConsoleTextAttribute(couleur_de_console, 10); 
 	std::cout << pBateau->getBateauName() << std::endl;
 	SetConsoleTextAttribute(couleur_de_console, 15); 
-	std::cout << "Donnez coordonnee : ";
+	std::cout << "Donnez coordonnee : " << std::endl;
 	SetConsoleTextAttribute(couleur_de_console, 10);
 
 	// Gestion des erreurs a faire
-	std::string X, Y;
-	std::cout << "X => ";
-	std::getline(std::cin, X);
-	std::cout << "                    Y => ";
-	std::getline(std::cin, Y);
-	uint8_t _X = std::stoul(X, nullptr, 0);
-	uint8_t _Y = std::stoul(Y, nullptr, 0);
-	if(_X < 0 || _X > 10 || _Y < 0 || _Y > 10)
+	int _X, _Y;
+	std::cout << "X => " << std::endl;
+	std::cin >> _X;
+	std::cout << "Y => " << std::endl;
+	std::cin >> _Y;
+	if((_X < 0) || (_X > 10) || (_Y < 0) || (_Y > 10))
 	{
 		std::cerr << "Coor error" << std::endl;
 		return;
@@ -69,7 +70,7 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	SetConsoleTextAttribute(couleur_de_console, 15);
 	std::cout << "Donnez direction";
 	SetConsoleTextAttribute(couleur_de_console, 10);
-	std::cout << " ( 0 => -- ou 1 => | ) : ";
+	std::cout << " ( 0 => -- ou 1 => | ) : " << std::endl;
 
 	bool direction;
 	std::cin >> direction;

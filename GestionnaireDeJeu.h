@@ -3,7 +3,9 @@
 #include <vector>
 #include <string>
 #include <windows.h>
-#include <stdexcept>	
+#include <stdexcept>
+#include <limits>
+#include <cstdint>
 
 class GestionnaireDeJeu
 {

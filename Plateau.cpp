@@ -174,36 +174,5 @@ void Plateau::drawPlateauTir()
 
 void Plateau::drawPlateauFlotte()
 {
-// Check if map pointer is valid
-	if (nullptr == this->plateauTir) return;
 
-	// First case empty
-	printf("   |");
-
-	// Draw Header line with its letter
-	for (int i = 0; i < this->columns; i++)
-	{
-		printf("%2c |", 'A' + i);
-	}
-
-	// Draw each row
-	for (int i = 0; i < this->row; i++)
-	{
-		// Draw Row number
-		printf("\n%2d |", i + 1);
-
-		// Draw each collumns
-		for (int k = 0; k < this->columns; k++)
-		{
-			// Todo define case status
-			char caseStatusChar = ' ';
-			char currentCase = this->plateauTir[i][k];
-
-			caseStatusChar = ' ';
-			printf("%2c |", caseStatusChar);
-		}
-	}
-
-	// Separate
-	printf("\n\n");
 }
