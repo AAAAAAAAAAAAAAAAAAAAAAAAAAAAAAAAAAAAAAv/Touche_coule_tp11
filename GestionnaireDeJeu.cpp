@@ -41,20 +41,25 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	std::cout << "------------Console "
 			  << this->listeJoueur[playerIndex]->getNom()  
 			  <<"------------\n";
-	(this->listeJoueur[playerIndex]->getPlateau())->drawPlateauTir();
+	this->listeJoueur[playerIndex]->getPlateau()->drawPlateauFlotte();
 	std::cout << std::endl;
 	std::cout << "Configuration de Bateau : "; 
 	SetConsoleTextAttribute(couleur_de_console, 10); 
 	std::cout << pBateau->getBateauName() << std::endl;
 	SetConsoleTextAttribute(couleur_de_console, 15); 
-	std::cout << "Donnez coordonnee (ex : ";
-	SetConsoleTextAttribute(couleur_de_console, 10); 
-	std::cout << "A3";
+	std::cout << "Donnez coordonnee : ";
+	SetConsoleTextAttribute(couleur_de_console, 10);
+
+	// Gestion des erreurs a faire
+	uint8_t X, Y;
+	std::cout << "X => ";
+	std::cin >> X;
+	std::cout << "                    Y => ";
+	std::cin >> Y;
+	pBateau->setPosition(X, Y);
+
 	SetConsoleTextAttribute(couleur_de_console, 15);
-	std::cout << ") :" << std::endl;
-
-	std::cin >> 
-
+	std::cout << std::endl;
 
 }
 

@@ -8,8 +8,8 @@ Bateau::Bateau()
     hitPoints = 0;
     bateauSize = 0;
     bateauName = "";
-    bateauAscii[0] = "";
-    bateauAscii[1] = "";
+    bateauAscii[0] = "■";
+    bateauAscii[1] = "■";
 }
 
 Bateau::Bateau(Bateau const& autre)

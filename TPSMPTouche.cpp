@@ -143,10 +143,16 @@ int main()
 	tabBateau.push_back(&pContreTorpilleur22);
 	tabBateau.push_back(&pTorpilleur2);
 
-
+	// Initiation des positions et directions pour joueur 1
 	for(int i = 0; i < 5; i++)
 	{
 		pGameManager->configure(0, *tabBateau[i]);
+	}
+
+	// Initiation des positions et directions pour joueur 2
+	for(int i = 4; i < 9; i++)
+	{
+		pGameManager->configure(1, *tabBateau[i]);
 	}
 
 	/*

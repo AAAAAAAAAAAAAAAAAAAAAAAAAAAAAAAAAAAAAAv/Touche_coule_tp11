@@ -78,6 +78,8 @@ Plateau::Plateau(uint8_t _row, uint8_t _columns) : row(_row), columns(_columns)
 	{
 		return;
 	}
+
+	
 }
 
 Plateau::~Plateau()
