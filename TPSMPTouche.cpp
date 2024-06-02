@@ -1,7 +1,43 @@
-// TPSMPTouche.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
 
-#include <iostream>
+
+ /$$$$$$$              /$$               /$$ /$$ /$$                 /$$   /$$                               /$$          
+| $$__  $$            | $$              |__/| $$| $$                | $$$ | $$                              | $$          
+| $$  \ $$  /$$$$$$  /$$$$$$    /$$$$$$  /$$| $$| $$  /$$$$$$       | $$$$| $$  /$$$$$$  /$$    /$$ /$$$$$$ | $$  /$$$$$$ 
+| $$$$$$$  |____  $$|_  $$_/   |____  $$| $$| $$| $$ /$$__  $$      | $$ $$ $$ |____  $$|  $$  /$$/|____  $$| $$ /$$__  $$
+| $$__  $$  /$$$$$$$  | $$      /$$$$$$$| $$| $$| $$| $$$$$$$$      | $$  $$$$  /$$$$$$$ \  $$/$$/  /$$$$$$$| $$| $$$$$$$$
+| $$  \ $$ /$$__  $$  | $$ /$$ /$$__  $$| $$| $$| $$| $$_____/      | $$\  $$$ /$$__  $$  \  $$$/  /$$__  $$| $$| $$_____/
+| $$$$$$$/|  $$$$$$$  |  $$$$/|  $$$$$$$| $$| $$| $$|  $$$$$$$      | $$ \  $$|  $$$$$$$   \  $/  |  $$$$$$$| $$|  $$$$$$$
+|_______/  \_______/   \___/   \_______/|__/|__/|__/ \_______/      |__/  \__/ \_______/    \_/    \_______/|__/ \_______/
+                                                                                                                          
+
+ /$$                        /$$                                           
+| $$                       |__/                                           
+| $$       /$$$$$$ /$$   /$$/$$ /$$$$$$$                                  
+| $$      /$$__  $| $$  | $| $$/$$_____/                                  
+| $$     | $$  \ $| $$  | $| $|  $$$$$$                                   
+| $$     | $$  | $| $$  | $| $$\____  $$                                  
+| $$$$$$$|  $$$$$$|  $$$$$$| $$/$$$$$$$/                                  
+|_/$$$$$$/\______/ /$$/$$/$$__|_______/                                   
+ /$$__  $$        |__| $| $$                                              
+| $$  \__//$$   /$$/$| $| $$ /$$$$$$ /$$   /$$/$$$$$$/$$$$  /$$$$$$       
+| $$ /$$$| $$  | $| $| $| $$|____  $| $$  | $| $$_  $$_  $$/$$__  $$      
+| $$|_  $| $$  | $| $| $| $$ /$$$$$$| $$  | $| $$ \ $$ \ $| $$$$$$$$      
+| $$  \ $| $$  | $| $| $| $$/$$__  $| $$  | $| $$ | $$ | $| $$_____/      
+|  $$$$$$|  $$$$$$| $| $| $|  $$$$$$|  $$$$$$| $$ | $$ | $|  $$$$$$$      
+ \/$$$$$$ \______/|__|__|__/\_______/\_/$$__/|/$$ |__/ |__/\_______/      
+ /$$__  $$                            | $$   |__/                         
+| $$  \ $$/$$   /$$ /$$$$$$ /$$$$$$$ /$$$$$$  /$$/$$$$$$$                 
+| $$  | $| $$  | $$/$$__  $| $$__  $|_  $$_/ | $| $$__  $$                
+| $$  | $| $$  | $| $$$$$$$| $$  \ $$ | $$   | $| $$  \ $$                
+| $$/$$ $| $$  | $| $$_____| $$  | $$ | $$ /$| $| $$  | $$                
+|  $$$$$$|  $$$$$$|  $$$$$$| $$  | $$ |  $$$$| $| $$  | $$                
+ \____ $$$\______/ \_______|__/  |__/  \___/ |__|__/  |__/                
+      \__/                                                                
+                                                                                                            
+*/
+
+
 #include <algorithm>
 #include "GestionnaireDeJeu.h"
 #include "Plateau.h"
@@ -49,24 +85,31 @@ int main()
 	— 1 porte-avion (ligne de 5 cases),
 	— 1 croiseur (ligne de 4 cases),
 	— 2 contre-torpilleurs (ligne de 3 cases),
-	— 1 torpilleur (ligne de 2 cases).
+	— 1 torpilleur (ligne de 2 cases)
+	il y a deux torpilleurs pour chaque joueur
+	11 -> joueur 1 torpilleur 1 (pareil pour 12)
 	*/
 
-	Bateau* tabBateau[5];
-
-	Bateau* pPorteAvion1 = nullptr;
-	tabBateau[0] = pPorteAvion1;
 	Bateau* pCroiseur1 = nullptr;
-	tabBateau[1] = pCroiseur1;
+	Bateau* pPorteAvion1 = nullptr;
 	Bateau* pContreTorpilleur11 = nullptr;
-	// il y a deux torpilleurs pour chaque joueur
-	// 11 -> joueur 1 torpilleur 1 (pareil pour 12)
-	tabBateau[2] = pContreTorpilleur11;
 	Bateau* pContreTorpilleur12 = nullptr;
-	tabBateau[3] = pContreTorpilleur12;
 	Bateau* pTorpilleur1 = nullptr;
+	
+	std::vector<Bateau*> tabBateau {
+		pPorteAvion1,
+		pCroiseur1,
+		pContreTorpilleur11,
+		pContreTorpilleur12,
+		pTorpilleur1
+	};
+	/*
+	tabBateau[0] = pPorteAvion1;
+	tabBateau[1] = pCroiseur1;
+	tabBateau[2] = pContreTorpilleur11;
+	tabBateau[3] = pContreTorpilleur12;
 	tabBateau[4] = pTorpilleur1;
-
+	*/
 	std::for_each(std::begin(tabBateau), 
 				  std::end(tabBateau), 
 				  [&](auto*& element) -> int {
@@ -79,29 +122,51 @@ int main()
 					}
 				});
 
+	// initialisation des tailles de bateaux
+
 	pPorteAvion1->setBateauSize(5);
 	pCroiseur1->setBateauSize(4);
 	pContreTorpilleur11->setBateauSize(3);
 	pContreTorpilleur12->setBateauSize(3);
 	pTorpilleur1->setBateauSize(2);
 
+	pPorteAvion1->setBateauName("Porte Avion");
+	pCroiseur1->setBateauName("Croiseur");
+	pContreTorpilleur11->setBateauName("Contre Torpilleur 1");
+	pContreTorpilleur12->setBateauName("Contre Torpilleur 2");
+	pTorpilleur1->setBateauName("Torpilleur");
 	
+	Bateau* pPorteAvion2 = new Bateau(*pPorteAvion1);
+	Bateau* pCroiseur2 = new Bateau(*pCroiseur1);
+	Bateau* pContreTorpilleur21 = new Bateau(*pContreTorpilleur11);
+	Bateau* pContreTorpilleur22 = new Bateau(*pContreTorpilleur12);
+	Bateau* pTorpilleur2 = new Bateau(*pTorpilleur1);
 
+	tabBateau.push_back(pPorteAvion2);
+	tabBateau.push_back(pCroiseur2);
+	tabBateau.push_back(pContreTorpilleur21);
+	tabBateau.push_back(pContreTorpilleur22);
+	tabBateau.push_back(pTorpilleur2);
+
+	pGameManager->startGame();
+	pGameManager->configure();
 	/*
-	Bateau* pPorteAvion2 = nullptr;
-	tabBateau[1] = pPorteAvion2;
-	Bateau* pCroiseur2 = nullptr;
-	tabBateau[3] = pCroiseur2;
-	Bateau* pContreTorpilleur21 = nullptr;
-	tabBateau[6] = pContreTorpilleur21;
-	Bateau* pContreTorpilleur22 = nullptr;
-	tabBateau[7] = pContreTorpilleur22;
-	Bateau* pTorpilleur2 = nullptr;
-	tabBateau[9] = pTorpilleur2;
+	std::cout << "*******BATAILLE NAVALE*******\n\n";
+	std::cout << "Nombre de joueurs : 2\n";
+	std::cout << "Nombre de bateaux  : 5/joueur\n";
+
+	for(int i = 0; i < 9; i++)
+	{	
+		std::cout << "------------Console Joueur 1------------\n"
+		std::cout << "Plateau de 
+		std::cout << "----------------------------------------"
+		pPlateau1->drawPlateauTir();
+	}
+	pPlateau1->drawPlateauTir();
 	*/
 
-	pPlateau1->drawPlateauTir();
 
+	// Liberer Memoire
 	delete pPlayerOne;
 	delete pPlayerTwo;
 	delete pGameManager;
@@ -116,8 +181,6 @@ int main()
 					element = nullptr;
 				});
 												
-
-
 	return EXIT_SUCCESS;
 }
 

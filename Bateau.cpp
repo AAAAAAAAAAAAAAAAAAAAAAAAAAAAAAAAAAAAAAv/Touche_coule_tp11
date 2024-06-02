@@ -14,9 +14,9 @@ Bateau::Bateau()
 
 Bateau::Bateau(Bateau const& autre)
 {
-    position[0] = autre.position[0];
-    position[1] = autre.position[1];
-    direction = autre.direction;
+    position[0] = -1;
+    position[1] = -1;
+    direction = 0;
     hitPoints = autre.hitPoints;
     bateauSize = autre.bateauSize;
     bateauName = autre.bateauName;

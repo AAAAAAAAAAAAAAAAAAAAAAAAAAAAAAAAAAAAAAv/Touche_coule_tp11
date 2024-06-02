@@ -17,6 +17,13 @@ void GestionnaireDeJeu::addPlayer(class Joueur* joueur)
 	this->listeJoueur.push_back(joueur);
 }
 
+void GestionnaireDeJeu::startGame()
+{
+	std::cout << "*******BATAILLE NAVALE*******\n\n";
+	std::cout << "Nombre de joueurs : 2\n";
+	std::cout << "Nombre de bateaux  : 5/joueur\n";
+}
+
 void GestionnaireDeJeu::passerTour()
 {
 }
