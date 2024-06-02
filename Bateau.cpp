@@ -12,6 +12,18 @@ Bateau::Bateau()
     bateauAscii[1] = "";
 }
 
+Bateau::Bateau(Bateau const& autre)
+{
+    position[0] = autre.position[0];
+    position[1] = autre.position[1];
+    direction = autre.direction;
+    hitPoints = autre.hitPoints;
+    bateauSize = autre.bateauSize;
+    bateauName = autre.bateauName;
+    bateauAscii[0] = autre.bateauAscii[0];
+    bateauAscii[1] = autre.bateauAscii[1];
+}
+
 void Bateau::setPosition(unsigned int newPosX, unsigned int newPosY)
 {
     position[0] = newPosX;

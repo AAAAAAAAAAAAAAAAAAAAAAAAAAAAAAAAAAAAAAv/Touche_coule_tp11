@@ -17,6 +17,8 @@ private:
 public:
 
     Bateau();
+    Bateau(Bateau const& autre);
+
     void setPosition(unsigned int newPosX, unsigned int newPosY);
     /**
      * @brief Get the boat direction

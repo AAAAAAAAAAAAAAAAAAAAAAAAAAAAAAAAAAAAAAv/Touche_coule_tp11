@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 #include "GestionnaireDeJeu.h"
 #include "Plateau.h"
 #include "Joueur.h"
@@ -27,14 +28,95 @@ int main()
 	pGameManager->addPlayer(pPlayerOne);
 	pGameManager->addPlayer(pPlayerTwo);
 
-
-
-	Plateau* pPlateau = new Plateau(10, 10);
-	if (nullptr == pPlateau)
+	Plateau* pPlateau1 = new Plateau(10, 10);
+	if (nullptr == pPlateau1)
 	{
 		std::cerr << "Failed to create a Plateau object" << std::endl;
 		return EXIT_FAILURE;
 	}
+
+	Plateau* pPlateau2 = new Plateau(10, 10);
+	if (nullptr == pPlateau2)
+	{
+		std::cerr << "Failed to create a Plateau object" << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	pPlayerOne->setPlateau(pPlateau1);
+	pPlayerTwo->setPlateau(pPlateau2);
+	
+	/*
+	— 1 porte-avion (ligne de 5 cases),
+	— 1 croiseur (ligne de 4 cases),
+	— 2 contre-torpilleurs (ligne de 3 cases),
+	— 1 torpilleur (ligne de 2 cases).
+	*/
+
+	Bateau* tabBateau[5];
+
+	Bateau* pPorteAvion1 = nullptr;
+	tabBateau[0] = pPorteAvion1;
+	Bateau* pCroiseur1 = nullptr;
+	tabBateau[1] = pCroiseur1;
+	Bateau* pContreTorpilleur11 = nullptr;
+	// il y a deux torpilleurs pour chaque joueur
+	// 11 -> joueur 1 torpilleur 1 (pareil pour 12)
+	tabBateau[2] = pContreTorpilleur11;
+	Bateau* pContreTorpilleur12 = nullptr;
+	tabBateau[3] = pContreTorpilleur12;
+	Bateau* pTorpilleur1 = nullptr;
+	tabBateau[4] = pTorpilleur1;
+
+	std::for_each(std::begin(tabBateau), 
+				  std::end(tabBateau), 
+				  [&](auto*& element) -> int {
+
+					element = new Bateau();
+					if(nullptr == element)
+					{
+						std::cerr << "Failed to create a Bateau object" << std::endl;
+						return EXIT_FAILURE;
+					}
+				});
+
+	pPorteAvion1->setBateauSize(5);
+	pCroiseur1->setBateauSize(4);
+	pContreTorpilleur11->setBateauSize(3);
+	pContreTorpilleur12->setBateauSize(3);
+	pTorpilleur1->setBateauSize(2);
+
+	
+
+	/*
+	Bateau* pPorteAvion2 = nullptr;
+	tabBateau[1] = pPorteAvion2;
+	Bateau* pCroiseur2 = nullptr;
+	tabBateau[3] = pCroiseur2;
+	Bateau* pContreTorpilleur21 = nullptr;
+	tabBateau[6] = pContreTorpilleur21;
+	Bateau* pContreTorpilleur22 = nullptr;
+	tabBateau[7] = pContreTorpilleur22;
+	Bateau* pTorpilleur2 = nullptr;
+	tabBateau[9] = pTorpilleur2;
+	*/
+
+	pPlateau1->drawPlateauTir();
+
+	delete pPlayerOne;
+	delete pPlayerTwo;
+	delete pGameManager;
+	delete pPlateau1;
+	delete pPlateau2;
+
+	std::for_each(std::begin(tabBateau), 
+				  std::end(tabBateau), 
+				  [&](auto*& element) -> void {
+
+					delete element;
+					element = nullptr;
+				});
+												
+
 
 	return EXIT_SUCCESS;
 }
