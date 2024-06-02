@@ -12,7 +12,7 @@ protected:
 
 public:
     explicit Joueur(std::string nom = "tommy");
-    virtual ~Joueur();
+    ~Joueur();
 
 };
 

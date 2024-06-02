@@ -1,13 +1,12 @@
 #include "Joueur.h"
 
-Joueur::Joueur(std::string nom) : nomJoueur(nom)
+Joueur::Joueur(std::string nom) : ControlleurJoueur(), nomJoueur(nom)
 {
-    this->ControlleurJoueur();
     // on lui crée son propre plateau
     this->pPlateau = new Plateau;
 }
 
-~Joueur::Joueur()
+Joueur::~Joueur()
 {
     delete pPlateau;
 }

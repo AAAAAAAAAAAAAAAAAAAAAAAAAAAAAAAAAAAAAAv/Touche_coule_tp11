@@ -3,12 +3,12 @@
 
 #include <iostream>
 #include "GestionnaireDeJeu.h"
-#include "ControlleurJoueur.h"
 #include "Plateau.h"
 #include "Joueur.h"
 
 int main()
 {
+	
 	Joueur* pPlayerOne = new Joueur("Eric Zemmour");
 	if (nullptr == pPlayerOne)
 	{
@@ -35,8 +35,6 @@ int main()
 		std::cerr << "Failed to create a Plateau object" << std::endl;
 		return EXIT_FAILURE;
 	}
-
-
 
 	return EXIT_SUCCESS;
 }

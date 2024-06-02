@@ -34,5 +34,11 @@
   "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\TPSMPTouche.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\TPSMPTouche.cpp",
   "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\TPSMPTouche.cpp",
   "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\TPSMPTouche.cpp.obj"
+},
+{
+  "directory": "C:/Users/guill/Desktop/TPECN/SMP/Touche_coule_tp11/build",
+  "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\Joueur.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\Joueur.cpp",
+  "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\Joueur.cpp",
+  "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\Joueur.cpp.obj"
 }
 ]
