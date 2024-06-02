@@ -51,12 +51,19 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	SetConsoleTextAttribute(couleur_de_console, 10);
 
 	// Gestion des erreurs a faire
-	uint8_t X, Y;
+	std::string X, Y;
 	std::cout << "X => ";
-	std::cin >> X;
+	std::getline(std::cin, X);
 	std::cout << "                    Y => ";
-	std::cin >> Y;
-	pBateau->setPosition(X, Y);
+	std::getline(std::cin, Y);
+	uint8_t _X = std::stoul(X, nullptr, 0);
+	uint8_t _Y = std::stoul(Y, nullptr, 0);
+	if(_X < 0 || _X > 10 || _Y < 0 || _Y > 10)
+	{
+		std::cerr << "Coor error" << std::endl;
+		return;
+	} 
+	pBateau->setPosition(_X, _Y);
 	
 	std::cout << std::endl;
 	SetConsoleTextAttribute(couleur_de_console, 15);
