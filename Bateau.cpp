@@ -39,6 +39,11 @@ bool Bateau::getDirection()
     return this->direction;
 }
 
+void Bateau::setDirection(bool d)
+{
+    this->direction = d;
+}
+
 void Bateau::damageBateau()
 {
     if (hitPoints > 0)

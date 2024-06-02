@@ -57,6 +57,16 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	std::cout << "                    Y => ";
 	std::cin >> Y;
 	pBateau->setPosition(X, Y);
+	
+	std::cout << std::endl;
+	SetConsoleTextAttribute(couleur_de_console, 15);
+	std::cout << "Donnez direction";
+	SetConsoleTextAttribute(couleur_de_console, 10);
+	std::cout << " ( 0 => -- ou 1 => | ) : ";
+
+	bool direction;
+	std::cin >> direction;
+	pBateau->setDirection(direction);
 
 	SetConsoleTextAttribute(couleur_de_console, 15);
 	std::cout << std::endl;
