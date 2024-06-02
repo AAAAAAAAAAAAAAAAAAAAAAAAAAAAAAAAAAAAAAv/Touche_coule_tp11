@@ -50,14 +50,14 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	SetConsoleTextAttribute(couleur_de_console, 10); 
 	std::cout << pBateau->getBateauName() << std::endl;
 	SetConsoleTextAttribute(couleur_de_console, 15); 
-	std::cout << "Donnez coordonnee : " << std::endl;
+	std::cout << "Donnez coordonnee : ";
 	SetConsoleTextAttribute(couleur_de_console, 10);
 
 	// Gestion des erreurs a faire
 	int _X, _Y;
-	std::cout << "X => " << std::endl;
+	std::cout << " X => ";
 	std::cin >> _X;
-	std::cout << "Y => " << std::endl;
+	std::cout << "                     Y => ";
 	std::cin >> _Y;
 	if((_X < 0) || (_X > 10) || (_Y < 0) || (_Y > 10))
 	{

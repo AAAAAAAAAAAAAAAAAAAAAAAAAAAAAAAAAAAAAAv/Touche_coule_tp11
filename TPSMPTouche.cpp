@@ -148,28 +148,11 @@ int main()
 	{
 		pGameManager->configure(0, *tabBateau[i]);
 	}
-
 	// Initiation des positions et directions pour joueur 2
-	for(int i = 4; i < 9; i++)
+	for(int i = 4; i < 10; i++)
 	{
 		pGameManager->configure(1, *tabBateau[i]);
 	}
-
-	/*
-	std::cout << "*******BATAILLE NAVALE*******\n\n";
-	std::cout << "Nombre de joueurs : 2\n";
-	std::cout << "Nombre de bateaux  : 5/joueur\n";
-
-	for(int i = 0; i < 9; i++)
-	{	
-		std::cout << "------------Console Joueur 1------------\n"
-		std::cout << "Plateau de 
-		std::cout << "----------------------------------------"
-		pPlateau1->drawPlateauTir();
-	}
-	pPlateau1->drawPlateauTir();
-	*/
-
 
 	// Liberer Memoire
 	delete pPlayerOne;
