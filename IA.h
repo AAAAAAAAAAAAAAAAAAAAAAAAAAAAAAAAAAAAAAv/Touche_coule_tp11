@@ -2,6 +2,7 @@
 #define IA_H
 
 #include <vector>
+#include "ControlleurJoueur.h"
 
 enum class Etat
 {

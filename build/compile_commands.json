@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Users/guill/Desktop/TPECN/SMP/Touche_coule_tp11/build",
+  "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\Bateau.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\Bateau.cpp",
+  "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\Bateau.cpp",
+  "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\Bateau.cpp.obj"
+},
+{
+  "directory": "C:/Users/guill/Desktop/TPECN/SMP/Touche_coule_tp11/build",
+  "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\ControlleurJoueur.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\ControlleurJoueur.cpp",
+  "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\ControlleurJoueur.cpp",
+  "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\ControlleurJoueur.cpp.obj"
+},
+{
+  "directory": "C:/Users/guill/Desktop/TPECN/SMP/Touche_coule_tp11/build",
+  "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\GestionnaireDeJeu.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\GestionnaireDeJeu.cpp",
+  "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\GestionnaireDeJeu.cpp",
+  "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\GestionnaireDeJeu.cpp.obj"
+},
+{
+  "directory": "C:/Users/guill/Desktop/TPECN/SMP/Touche_coule_tp11/build",
+  "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\IA.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\IA.cpp",
+  "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\IA.cpp",
+  "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\IA.cpp.obj"
+},
+{
+  "directory": "C:/Users/guill/Desktop/TPECN/SMP/Touche_coule_tp11/build",
+  "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\Plateau.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\Plateau.cpp",
+  "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\Plateau.cpp",
+  "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\Plateau.cpp.obj"
+},
+{
+  "directory": "C:/Users/guill/Desktop/TPECN/SMP/Touche_coule_tp11/build",
+  "command": "C:\\MinGW\\bin\\c++.exe -g -o CMakeFiles\\TOUCHE_COULE_TP11.dir\\TPSMPTouche.cpp.obj -c C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\TPSMPTouche.cpp",
+  "file": "C:\\Users\\guill\\Desktop\\TPECN\\SMP\\Touche_coule_tp11\\TPSMPTouche.cpp",
+  "output": "CMakeFiles\\TOUCHE_COULE_TP11.dir\\TPSMPTouche.cpp.obj"
+}
+]

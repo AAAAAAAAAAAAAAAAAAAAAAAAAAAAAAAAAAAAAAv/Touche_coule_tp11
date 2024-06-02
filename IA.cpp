@@ -6,8 +6,9 @@ IA::IA()
     ControlleurJoueur();
 
 }
-
+/*
 void IA::ajouterBateau(class Bateau* bateau, unsigned int x, unsigned int y)
 {
     this->pPlateau->ajoutBateau(bateau, x, y);
 }
+*/

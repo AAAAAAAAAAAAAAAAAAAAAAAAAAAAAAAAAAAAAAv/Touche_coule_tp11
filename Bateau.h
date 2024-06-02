@@ -18,20 +18,22 @@ public:
 
     Bateau();
     void setPosition(unsigned int newPosX, unsigned int newPosY);
-    unsigned int* getPosition();
     /**
      * @brief Get the boat direction
      * @return true if vertical, false if horizontal
      */
+    unsigned int* getPosition();
     bool getDirection();
-    void damageBateau();
     bool getBateauState();
-    void setBateauSize(unsigned int size);
     unsigned int getBateauSize();
-    void setBateauName(std::string name);
     std::string getBateauName();
-    bool setBateauAscii(std::string asciiX, std::string asciiY);
     std::string getBateauAscii();
+
+    void damageBateau();
+
+    void setBateauSize(unsigned int size);
+    void setBateauName(std::string name);
+    bool setBateauAscii(std::string asciiX, std::string asciiY);
 };
 
 #endif

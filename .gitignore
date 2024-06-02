@@ -4,7 +4,7 @@
 *.vcxproj*
 /x64/Debug
 /TPSMPTouche/x64/Debug
-
+./CMakeLists.txt
 .$diagramme_de_classe_tp11.drawio.bkp
 
 .$DiagrammeCasUtilisations.drawio.bkp

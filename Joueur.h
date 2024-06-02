@@ -3,6 +3,7 @@
 
 #include <string>
 #include "Plateau.h"
+#include "ControlleurJoueur.h"
 
 class Joueur : public ControlleurJoueur
 {
