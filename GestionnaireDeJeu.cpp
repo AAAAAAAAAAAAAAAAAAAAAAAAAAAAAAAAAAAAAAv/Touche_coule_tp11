@@ -44,7 +44,7 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	std::cout << this->listeJoueur[playerIndex]->getNom();
 	SetConsoleTextAttribute(couleur_de_console, 15);  
 	std::cout <<"------------\n";
-	this->listeJoueur[playerIndex]->getPlateau()->drawPlateauFlotte();
+	this->listeJoueur[playerIndex]->getPlateau()->drawPlateauTir();
 	std::cout << std::endl;
 	std::cout << "Configuration de Bateau : "; 
 	SetConsoleTextAttribute(couleur_de_console, 10); 
