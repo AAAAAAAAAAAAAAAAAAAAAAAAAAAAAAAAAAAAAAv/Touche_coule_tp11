@@ -48,32 +48,36 @@ void GestionnaireDeJeu::configure(uint8_t playerIndex, Bateau* const pBateau)
 	std::cout << std::endl;
 	std::cout << "Configuration de Bateau : "; 
 	SetConsoleTextAttribute(couleur_de_console, 10); 
-	std::cout << pBateau->getBateauName() << std::endl;
+	std::cout << pBateau->getBateauName() << " de taille " 
+			  << pBateau->getBateauSize() << std::endl;
 	SetConsoleTextAttribute(couleur_de_console, 15); 
 	std::cout << "Donnez coordonnee : ";
 	SetConsoleTextAttribute(couleur_de_console, 10);
 
 	// Gestion des erreurs a faire
 	int _X, _Y;
-	std::cout << " X => ";
-	std::cin >> _X;
-	std::cout << "                     Y => ";
-	std::cin >> _Y;
-	if((_X < 0) || (_X > 10) || (_Y < 0) || (_Y > 10))
+	do
 	{
-		std::cerr << "Coor error" << std::endl;
-		return;
-	}
+		std::cout << " X => ";
+		std::cin >> _X;
+	} while(_X < 0 || _X > 10);
+	do
+	{
+		std::cout << "                     Y => ";
+		std::cin >> _Y;
+	} while(_Y < 0 || _Y > 10);
+	
 	pBateau->setPosition(_X, _Y);
 	
 	std::cout << std::endl;
 	SetConsoleTextAttribute(couleur_de_console, 15);
 	std::cout << "Donnez direction";
 	SetConsoleTextAttribute(couleur_de_console, 10);
-	std::cout << " ( 0 => -- ou 1 => | ) : " << std::endl;
-
+	//Gestion d'erreur encore a faire ici
 	bool direction;
+	std::cout << " ( 0 => -- ou 1 => | ) : " << std::endl;
 	std::cin >> direction;
+
 	pBateau->setDirection(direction);
 
 	SetConsoleTextAttribute(couleur_de_console, 15);
